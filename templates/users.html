@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Users - MovieWeb App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Users</h1>
+<div class="list-users">
+    {% for user in users %}
+    <a href="/users/{{ user[1] }}">
+        <div class="user">
+        <h2>{{ user[0] }}</h2>
+        </div>
+    </a>
+    {% endfor %}
+    <br>
+</div>
+<br>
+<div>
+    <form action="/add_user" method="get">
+        <input type="submit" value="Add New User">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Movie</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Please fill the details below to add movie for - User id-{{ user_id }}</h1>
+    <br>
+ <form action="/users/{{ user_id }}/add_movie" method="post">
+    <label for="name">Movie Name:</label><br>
+    <input type="text" id="name" name="name" value="Enter a Movie name"><br>
+    <label for="year">Year:</label><br>
+    <input type="number" id="year" name="year" value="Enter a Movie year"><br>
+    <label for="rating">Movie Rating:</label><br>
+    <input type="number" id="rating" name="rating" value="Enter a Movie rating"><br>
+    <label for="director">Director Name:</label><br>
+    <input type="text" id="director" name="director" value="Enter a Director name"><br>
+    <input type="submit" value="Submit">
+ </form>
+</body>
+</html>
