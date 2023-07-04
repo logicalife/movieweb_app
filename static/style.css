@@ -1,5 +1,5 @@
 body {
-  background: #F5F5F0;
+  background: #457b9d;
   color: black;
   font-family: Monaco;
 }
@@ -27,7 +27,8 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   justify-content: center
 }
 
@@ -37,13 +38,13 @@ body {
 }
 
 .movie {
-  width: 140px;
+  width: 80px;
 }
 
 .movie-title,
 .movie-year {
   font-size: 0.8em;
-  text-align: center;
+  text-align: left;
 }
 
 .movie-title {
@@ -60,7 +61,7 @@ body {
 
 .movie-rating {
   font-size: 0.8em;
-  text-align: center;
+  text-align: left;
   color: red;
 }
 

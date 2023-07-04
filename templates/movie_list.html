@@ -5,6 +5,9 @@
      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+<form action="/users/{{ user_id }}/add_movie" method="get">
+        <input type="submit" value="Add New Movie">
+</form>
 <div>
     <ol class="movie-grid">
         {% for movie in movies %}
@@ -21,9 +24,6 @@
         </li>
         {% endfor %}
         </ol><br>
-    <form action="/users/{{ user_id }}/add_movie" method="get">
-        <input type="submit" value="Add New Movie">
-    </form>
 </div>
 </body>
 </html>
